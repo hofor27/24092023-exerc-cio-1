@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // 1. Início.
+
+    // 2. Inicializar variáveis para armazenar as informações do vinho mais caro.
+    let nomeMaisCaro = "";
+    let precoMaisCaro = -1;
+    let tipoMaisCaro = "";
+
+    // 3. Criar um loop para inserir informações sobre vinhos até que o nome seja "end".
+    while (true) {
+      // 4. Solicitar ao usuário que insira o nome do vinho.
+      let nome = prompt("Digite o nome do vinho (ou 'end' para encerrar):");
+
+      // 5. Verificar se o nome é "end" para sair do loop.
+      if (nome.toLowerCase() === "end") {
+        break;
+      }
+
+      // 6. Solicitar ao usuário que insira o preço do vinho.
+      let preco = parseFloat(prompt("Digite o preço do vinho:"));
+
+      // 7. Solicitar ao usuário que insira o tipo do vinho (T para tinto, B para branco, R para rosé).
+      let tipo = prompt(
+        "Digite o tipo do vinho (T para tinto, B para branco, R para rosé):"
+      );
+
+      // 8. Verificar se o vinho atual é mais caro do que o anteriormente mais caro.
+      if (preco > precoMaisCaro) {
+        nomeMaisCaro = nome;
+        precoMaisCaro = preco;
+        tipoMaisCaro = tipo;
+      }
+    }
+
+    // 9. Exibir a descrição do vinho mais caro.
+    console.log("O vinho mais caro é:");
+    console.log("Nome: " + nomeMaisCaro);
+    console.log("Preço: R$" + precoMaisCaro.toFixed(2));
+    console.log("Tipo: " + tipoMaisCaro);
+
+    // 10. Fim.
+  </script>
+</html>

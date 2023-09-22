@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // 1. Início.
+
+    // 2. Solicitar ao usuário que insira o consumo de eletricidade em KWh.
+    let consumo = parseFloat(
+      prompt("Digite o consumo de eletricidade em KWh:")
+    );
+
+    // 3. Inicializar uma variável para armazenar o valor total da conta de eletricidade.
+    let conta = 0;
+
+    // 4. Calcular a conta de eletricidade com base na tabela de consumo.
+    if (consumo <= 300) {
+      // Se o consumo for até 300 KWh, o preço é de 1,25 R$ por KWh.
+      conta = consumo * 1.25;
+    } else if (consumo <= 600) {
+      // Se o consumo estiver entre 301 e 600 KWh, o preço é de 1,50 R$ por KWh.
+      conta = consumo * 1.5;
+    } else if (consumo <= 1000) {
+      // Se o consumo estiver entre 601 e 1000 KWh, o preço é de 1,75 R$ por KWh.
+      conta = consumo * 1.75;
+    } else {
+      // Se o consumo for acima de 1000 KWh, o preço é de 2,00 R$ por KWh.
+      conta = consumo * 2.0;
+    }
+
+    // 5. Exibir o valor total da conta de eletricidade calculada.
+    console.log("A conta de eletricidade é: R$" + conta.toFixed(2));
+
+    // 6. Fim.
+  </script>
+</html>

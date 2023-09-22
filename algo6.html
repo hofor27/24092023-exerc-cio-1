@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // 1. Início.
+
+    // 2. Solicitar ao usuário que insira o primeiro número inteiro (num1).
+    let num1 = parseInt(prompt("Digite o primeiro número inteiro:"));
+
+    // 3. Solicitar ao usuário que insira o segundo número inteiro (num2).
+    let num2 = parseInt(prompt("Digite o segundo número inteiro:"));
+
+    // 4. Calcular o resultado da adição.
+    let resultadoAdicao = num1 + num2;
+
+    // 5. Calcular o resultado da subtração.
+    let resultadoSubtracao = num1 - num2;
+
+    // 6. Verificar se num2 não é igual a zero para evitar a divisão por zero.
+    if (num2 !== 0) {
+      // 7a. Calcular o resultado da divisão.
+      let resultadoDivisao = num1 / num2;
+      // 8. Exibir o resultado da divisão.
+      console.log("Resultado da divisão: " + resultadoDivisao);
+    } else {
+      // 7b. Se num2 for igual a zero, exibir uma mensagem de erro para divisão por zero.
+      console.log("Divisão por zero não é permitida.");
+    }
+
+    // 9. Calcular o resultado da multiplicação.
+    let resultadoMultiplicacao = num1 * num2;
+
+    // 10. Exibir os resultados de adição, subtração e multiplicação.
+    console.log("Resultado da adição: " + resultadoAdicao);
+    console.log("Resultado da subtração: " + resultadoSubtracao);
+    console.log("Resultado da multiplicação: " + resultadoMultiplicacao);
+
+    // 11. Fim.
+  </script>
+</html>

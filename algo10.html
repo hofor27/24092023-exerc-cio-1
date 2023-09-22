@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // 1. Início.
+
+    // 2. Solicitar ao usuário que insira o preço anterior do produto.
+    let precoAnterior = parseFloat(
+      prompt("Digite o preço anterior do produto:")
+    );
+
+    // 3. Solicitar ao usuário que insira o preço atual do produto.
+    let precoAtual = parseFloat(prompt("Digite o preço atual do produto:"));
+
+    // 4. Calcular o preço durante a promoção usando as três opções.
+    let opcao1 = precoAnterior;
+    let opcao2 = precoAtual * 0.9; // Desconto de 10% no preço atual
+    let opcao3 = ((precoAtual + precoAnterior) * 0.9) / 2; // Desconto de 10% na média
+
+    // 5. Encontrar o preço mais baixo entre as três opções.
+    let menorPreco = Math.min(opcao1, opcao2, opcao3);
+
+    // 6. Exibir o preço durante a promoção.
+    console.log("O preço durante a promoção é: R$" + menorPreco.toFixed(2));
+
+    // 7. Fim.
+  </script>
+</html>

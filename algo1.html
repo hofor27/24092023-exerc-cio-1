@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documento</title>
+  </head>
+  <body></body>
+  <script>
+    // Inicializar as variáveis A e B
+    let A = 0;
+    let B = 0;
+
+    // Criar uma função para ler e processar a entrada do usuário
+    function processarEntrada() {
+      // Solicitar ao usuário que insira um número
+      let entrada_usuario = prompt(
+        "Digite um número (digite '0' para encerrar):"
+      );
+
+      // Converter a entrada em um número de ponto flutuante
+      let numero = parseFloat(entrada_usuario);
+
+      // Verificar se o número é positivo, negativo ou zero
+      if (numero > 0) {
+        A += numero;
+      } else if (numero < 0) {
+        B += numero;
+      }
+
+      // Verificar se o usuário deseja encerrar
+      if (numero !== 0) {
+        processarEntrada(); // Chamar a função recursivamente para mais entradas
+      } else {
+        // Exibir os valores de A e B no final
+        console.log("Positivo (A): " + A);
+        console.log("Negativo (B): " + B);
+      }
+    }
+
+    // Iniciar o processamento da entrada
+    processarEntrada();
+  </script>
+</html>
